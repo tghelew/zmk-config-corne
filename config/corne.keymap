@@ -134,10 +134,10 @@
             //                        | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &td_n1  &td_n2  &td_n3                    &td_n4        &td_n5                &td_n6               &td_n7           &td_n8                      &td_n9   &td_n0    &kp GRAVE
-&kp TAB     &kp A   &kp S   &hm LCTRL D               &hm LSHIFT F  &kp G                 &kp H                &hm RSHIFT J     &hm RCTRL K                 &kp L    &kp SEMI  &kp SQT
-&mo_to 3 3  &kp Z   &kp X   &kp C                     &kp V         &kp B                 &kp N                &kp M            &kp COMMA                   &kp DOT  &kp FSLH  &mo_to 4 4
-                            &kt_kp LEFT_ALT LEFT_ALT  &lt 1 DELETE  &mt LEFT_GUI SPACE    &mt RIGHT_GUI ENTER  &lt 2 BACKSPACE  &kt_kp RIGHT_ALT RIGHT_ALT
+&kp ESCAPE  &td_n1  &td_n2              &td_n3                    &td_n4        &td_n5                &td_n6               &td_n7           &td_n8                      &td_n9               &td_n0    &kp GRAVE
+&kp TAB     &kp A   &hm LC(LEFT_ALT) S  &hm LCTRL D               &hm LSHIFT F  &kp G                 &kp H                &hm RSHIFT J     &hm RCTRL K                 &hm RC(RIGHT_ALT) L  &kp SEMI  &kp SQT
+&mo_to 3 3  &kp Z   &kp X               &kp C                     &kp V         &kp B                 &kp N                &kp M            &kp COMMA                   &kp DOT              &kp FSLH  &mo_to 4 4
+                                        &kt_kp LEFT_ALT LEFT_ALT  &lt 1 DELETE  &mt LEFT_GUI SPACE    &mt RIGHT_GUI ENTER  &lt 2 BACKSPACE  &kt_kp RIGHT_ALT RIGHT_ALT
             >;
 
             label = "Base";
