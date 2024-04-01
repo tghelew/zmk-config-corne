@@ -64,7 +64,7 @@
             //                        | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&lt 5 ESC   &none                 &none               &none                  &none         &none                           &none                    &none            &none                     &none                &none                        &lt 5 GRAVE
+&lt 5 ESC   &kp Q                 &kp W               &kp E                  &kp R         &kp T                           &kp Y                    &kp U            &kp I                     &kp O                &kp P                        &lt 5 GRAVE
 &kp TAB     &hm LA(LC(LSHIFT)) A  &hm LC(LEFT_ALT) S  &hm LCTRL D            &hm LSHIFT F  &hm LA(LC(LG(LEFT_SHIFT))) G    &hm RA(RC(RG(RSHFT))) H  &hm RSHIFT J     &hm RCTRL K               &hm RC(RIGHT_ALT) L  &hm RA(RC(RSHFT)) SEMICOLON  &kp SQT
 &mo_to 3 3  &kp Z                 &kp X               &kp C                  &kp V         &kp B                           &kp N                    &kp M            &kp COMMA                 &kp DOT              &kp FSLH                     &mo_to 4 4
                                                       &mt LEFT_ALT UP_ARROW  &lt 1 DELETE  &mt LEFT_GUI SPACE              &mt RIGHT_GUI ENTER      &lt 2 BACKSPACE  &mt RIGHT_ALT DOWN_ARROW
