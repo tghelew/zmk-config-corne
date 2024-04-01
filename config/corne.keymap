@@ -41,76 +41,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
-
-        td_n1: td_n1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N1";
-            #binding-cells = <0>;
-            bindings = <&kp Q>, <&kp N1>;
-        };
-
-        td_n2: td_n2 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N2";
-            #binding-cells = <0>;
-            bindings = <&kp W>, <&kp NUMBER_2>;
-        };
-
-        td_n3: td_n3 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N3";
-            #binding-cells = <0>;
-            bindings = <&kp E>, <&kp NUMBER_3>;
-        };
-
-        td_n4: td_n4 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N4";
-            #binding-cells = <0>;
-            bindings = <&kp R>, <&kp NUMBER_4>;
-        };
-
-        td_n5: td_n5 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N5";
-            #binding-cells = <0>;
-            bindings = <&kp T>, <&kp NUMBER_5>;
-        };
-
-        td_n6: td_n6 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N6";
-            #binding-cells = <0>;
-            bindings = <&kp Y>, <&kp NUMBER_6>;
-        };
-
-        td_n7: td_n7 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N7";
-            #binding-cells = <0>;
-            bindings = <&kp U>, <&kp NUMBER_7>;
-        };
-
-        td_n8: td_n8 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N8";
-            #binding-cells = <0>;
-            bindings = <&kp I>, <&kp NUMBER_8>;
-        };
-
-        td_n9: td_n9 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N9";
-            #binding-cells = <0>;
-            bindings = <&kp O>, <&kp NUMBER_9>;
-        };
-
-        td_n0: td_n0 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_N0";
-            #binding-cells = <0>;
-            bindings = <&kp P>, <&kp NUMBER_0>;
-        };
     };
 
     combos {
@@ -134,7 +64,7 @@
             //                        | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &td_n1                &td_n2              &td_n3                 &td_n4        &td_n5                          &td_n6                   &td_n7           &td_n8                    &td_n9               &td_n0                       &kp GRAVE
+&lt 5 ESC   &none                 &none               &none                  &none         &none                           &none                    &none            &none                     &none                &none                        &lt 5 GRAVE
 &kp TAB     &hm LA(LC(LSHIFT)) A  &hm LC(LEFT_ALT) S  &hm LCTRL D            &hm LSHIFT F  &hm LA(LC(LG(LEFT_SHIFT))) G    &hm RA(RC(RG(RSHFT))) H  &hm RSHIFT J     &hm RCTRL K               &hm RC(RIGHT_ALT) L  &hm RA(RC(RSHFT)) SEMICOLON  &kp SQT
 &mo_to 3 3  &kp Z                 &kp X               &kp C                  &kp V         &kp B                           &kp N                    &kp M            &kp COMMA                 &kp DOT              &kp FSLH                     &mo_to 4 4
                                                       &mt LEFT_ALT UP_ARROW  &lt 1 DELETE  &mt LEFT_GUI SPACE              &mt RIGHT_GUI ENTER      &lt 2 BACKSPACE  &mt RIGHT_ALT DOWN_ARROW
@@ -168,10 +98,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp HOME   &kp END        &kp F9  &kp F8  &kp F7  &kp F10    &kp DELETE    &kp N7  &kp N8  &kp N9  &kp KP_DOT       &kp BACKSPACE
-&kp PG_UP  &kp PAGE_DOWN  &kp F6  &kp F5  &kp F4  &kp F11    &kp KP_ENTER  &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_DIVIDE
-&trans     &trans         &kp F3  &kp F2  &kp F1  &kp F12    &kp N0        &kp N1  &kp N2  &kp N3  &kp KP_PLUS      &kp KP_MINUS
-                                  &trans  &trans  &trans     &trans        &trans  &trans
+&kp HOME    &kp END        &kp F9  &kp F8  &kp F7  &kp F10    &kp DELETE    &kp N7  &kp N8  &kp N9  &kp KP_DOT       &kp BACKSPACE
+&kp PG_UP   &kp PAGE_DOWN  &kp F6  &kp F5  &kp F4  &kp F11    &kp KP_ENTER  &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_DIVIDE
+&kp INSERT  &trans         &kp F3  &kp F2  &kp F1  &kp F12    &kp N0        &kp N1  &kp N2  &kp N3  &kp KP_PLUS      &kp KP_MINUS
+                                   &trans  &trans  &trans     &trans        &trans  &trans
             >;
 
             label = "Numeric";
@@ -179,9 +109,9 @@
 
         MEDIA {
             bindings = <
-&trans  &trans  &kp C_BRIGHTNESS_DEC  &trans            &kp C_BRIGHTNESS_INC  &trans    &trans    &trans    &trans        &trans     &trans  &trans
-&trans  &trans  &kp C_VOLUME_DOWN     &kp C_MUTE        &kp C_VOLUME_UP       &trans    &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans  &trans
-&trans  &trans  &kp C_PREVIOUS        &kp C_PLAY_PAUSE  &kp C_NEXT            &trans    &trans    &trans    &trans        &trans     &trans  &trans
+&trans  &trans  &kp C_BRIGHTNESS_DEC  &trans            &kp C_BRIGHTNESS_INC  &trans    &trans    &trans    &trans        &trans     &trans       &trans
+&trans  &trans  &kp C_VOLUME_DOWN     &kp C_MUTE        &kp C_VOLUME_UP       &trans    &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &kp HOME     &kp END
+&trans  &trans  &kp C_PREVIOUS        &kp C_PLAY_PAUSE  &kp C_NEXT            &trans    &trans    &trans    &trans        &trans     &kp PAGE_UP  &kp PAGE_DOWN
                                       &trans            &trans                &trans    &trans    &trans    &trans
             >;
 
@@ -197,6 +127,15 @@
             >;
 
             label = "System";
+        };
+
+        NUM+ {
+            bindings = <
+&trans   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
+&kp END  &kp HOME      &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT       &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT     &kp HOME      &kp END
+&trans   &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans
+                                     &trans        &trans        &trans          &trans        &trans        &trans
+            >;
         };
     };
 };
