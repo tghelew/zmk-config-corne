@@ -91,20 +91,12 @@
         };
 
         NUM {
-            // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
-
             bindings = <
-&kp HOME    &kp END        &kp F9  &kp F8  &kp F7  &kp F10    &kp DELETE    &kp N7  &kp N8  &kp N9  &kp KP_DOT       &kp BACKSPACE
-&kp PG_UP   &kp PAGE_DOWN  &kp F6  &kp F5  &kp F4  &kp F11    &kp KP_ENTER  &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_DIVIDE
-&kp INSERT  &trans         &kp F3  &kp F2  &kp F1  &kp F12    &kp N0        &kp N1  &kp N2  &kp N3  &kp KP_PLUS      &kp KP_MINUS
-                                   &trans  &trans  &trans     &trans        &trans  &trans
+&trans   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
+&kp END  &kp HOME      &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT       &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT     &kp HOME      &kp END
+&trans   &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans
+                                     &trans        &trans        &trans          &trans        &trans        &trans
             >;
-
-            label = "Numeric";
         };
 
         MEDIA {
@@ -130,12 +122,20 @@
         };
 
         NUM+ {
+            // -----------------------------------------------------------------------------------------
+            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+            // | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
+            // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            //                    | GUI |     | SPC |   | ENT |     | ALT |
+
             bindings = <
-&trans   &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0  &trans
-&kp END  &kp HOME      &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT       &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT     &kp HOME      &kp END
-&trans   &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5  &trans
-                                     &trans        &trans        &trans          &trans        &trans        &trans
+&kp HOME    &kp END        &kp F9  &kp F8  &kp F7  &kp F10    &kp DELETE    &kp N7  &kp N8  &kp N9  &kp KP_DOT       &kp BACKSPACE
+&kp PG_UP   &kp PAGE_DOWN  &kp F6  &kp F5  &kp F4  &kp F11    &kp KP_ENTER  &kp N4  &kp N5  &kp N6  &kp KP_MULTIPLY  &kp KP_DIVIDE
+&kp INSERT  &trans         &kp F3  &kp F2  &kp F1  &kp F12    &kp N0        &kp N1  &kp N2  &kp N3  &kp KP_PLUS      &kp KP_MINUS
+                                   &trans  &trans  &trans     &trans        &trans  &trans
             >;
+
+            label = "Numeric + Function";
         };
     };
 };
